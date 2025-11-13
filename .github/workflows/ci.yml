@@ -5,8 +5,16 @@ name: Flutter CI
 
 on:
   push:
+    branches:
+      - master
     tags:
-      - 'v*.*.*-*' # This will match tags like v1.0.0, v0.1.0-beta.1, v0.1.0-alpha.1, etc.
+      - '*'
+  pull_request:
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.txt'
+      - '**/*.png'
+      - '**/*.jpg'
     
 # on: push    # Default will running for every branch.
     
